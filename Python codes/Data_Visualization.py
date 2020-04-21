@@ -20,15 +20,26 @@ try:
     df_var.describe()
     
        
-    plt.figure(figsize =(10, 4))       
-    #df_var['imdbRating'].hist(bins = 10) 
+    plt.figure(figsize =(10, 4)) 
+    df_var['imdbRating'].value_counts().sort_index().plot(kind='bar')
     
     plt.figure(figsize =(10, 4))
-    y_pos = np.arange((df_var['imdbRating'].value_counts()))    
-    plt.bar(df_var['imdbRating'],y_pos,width=5)
-    
-    df_var['imdbRating'].value_counts().sort_index().plot(kind='bar')
     df_var['imdbRating'].plot(kind='hist')
+    
+    plt.figure(figsize =(10, 4))
+    df_var['imdbRating'].plot(kind='box')
+    
+    plt.figure(figsize =(10, 4))
+    df_var['imdbRating'].plot(kind='line')
+    
+    plt.figure(figsize =(10, 4))
+    df_var['imdbRating'].plot(kind='density')
+    
+    plt.figure(figsize =(10, 4))
+    df_var['imdbRating'].plot(kind='area')
+    
+    plt.figure(figsize =(10, 4))
+    df_var['imdbRating'].plot(kind='pie')
     
     plt.show()
     
