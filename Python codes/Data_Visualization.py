@@ -28,7 +28,7 @@ try:
     plt.bar(df_var['imdbRating'],y_pos,width=5)
     
     df_var['imdbRating'].value_counts().sort_index().plot(kind='bar')
-    df_var['imdbRating'].plot(kind='hist', hist_kwds={'bins':[i*0.1 for i in range(11)]})
+    df_var['imdbRating'].plot(kind='hist')
     
     plt.show()
     
